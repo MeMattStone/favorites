@@ -142,7 +142,7 @@ class UserRepository
 		$favorites = $this->favoritesWithGroups($favorites);
 
 		if ( !is_null($site_id) && is_null($group_id) ) $favorites = Helpers::pluckSiteFavorites($site_id, $favorites);
-		if ( !is_null($group_id) ) $favorites = Helpers::pluckGroupFavorites($group_id, $site_id, $favorites);
+		if ( !is_null($group_id) ) $favorites = Helpers::pluckGroupFavorites($group_id, $favorites, $site_id);
 
 		return $favorites;
 	}
@@ -157,7 +157,7 @@ class UserRepository
 		$favorites = $this->favoritesWithSiteID($favorites);
 		$favorites = $this->favoritesWithGroups($favorites);
 		if ( !is_null($site_id) && is_null($group_id) ) $favorites = Helpers::pluckSiteFavorites($site_id, $favorites);
-		if ( !is_null($group_id) ) $favorites = Helpers::pluckGroupFavorites($group_id, $site_id, $favorites);
+		if ( !is_null($group_id) ) $favorites = Helpers::pluckGroupFavorites($group_id, $favorites, $site_id);
 		return $favorites;
 	}
 
@@ -172,7 +172,7 @@ class UserRepository
 		$favorites = $this->favoritesWithGroups($favorites);
 		if ( isset($_POST['user_consent_accepted']) && $_POST['user_consent_accepted'] == 'true' ) $favorites[0]['consent_provided'] = time();
 		if ( !is_null($site_id) && is_null($group_id) ) $favorites = Helpers::pluckSiteFavorites($site_id, $favorites);
-		if ( !is_null($group_id) ) $favorites = Helpers::pluckGroupFavorites($group_id, $site_id, $favorites);
+		if ( !is_null($group_id) ) $favorites = Helpers::pluckGroupFavorites($group_id, $favorites, $site_id);
 		return $favorites;
 	}
 
