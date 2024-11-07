@@ -1,10 +1,10 @@
-# Favorites for Wordpress
+# Favorites for Wordpress (Atomic Smash Version)
 
 ## Overview
 
-Favorites is a WordPress plugin designed for end users and theme developers. It provides an easy-to-use API for adding favorite button functionality to any post type.
+Favorites (Atomic Smash Version) is a WordPress plugin designed for end users and theme developers. It provides an easy-to-use API for adding favorite button functionality to any post type.
 
-The plugin name is “Favorites,” but the button text is customizable. It can provide a way to save favorites, likes, bookmarks, or any other similar types of data.
+The plugin name is “Favorites (Atomic Smash Version),” but the button text is customizable. It can provide a way to save favorites, likes, bookmarks, or any other similar types of data.
 
 ### Demo 
 [View the Demo](http://favoriteposts.com)
